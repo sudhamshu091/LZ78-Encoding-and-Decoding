@@ -35,7 +35,6 @@ def encode_lz78(text):
                 break
             i = i + 1
             stringToBeSaved = stringToBeSaved + text[i]
-        #print ("<{0}, {1}>".format(indexInDictionary, stringToBeSaved[len(stringToBeSaved) - 1]))
         encodedNumbers.append(indexInDictionary)
         encodedLetters.append(stringToBeSaved[len(stringToBeSaved) - 1])
         if (stringToBeSaved not in dictionary):
@@ -82,3 +81,4 @@ while i < len(encodedNumbers):
 print('\n')
 decode_lz78(encodedNumbers, encodedLetters, dictionary)
 print("Decoded string:", "".join(l))
+
